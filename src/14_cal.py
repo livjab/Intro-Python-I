@@ -23,5 +23,24 @@ import sys
 import calendar
 from datetime import datetime
 
-# working on my git skills
-print("Git it")
+
+def print_cal(*args):
+
+  today = datetime.now()
+  year = today.year
+  month = today.month
+
+  if len(args) == 1:
+    print(calendar.month(year, month))
+
+  elif len(args) == 2:
+    print(calendar.month(year, args[1]))
+
+  elif len(args) == 3:
+    print(calendar.month(args[2], args[1]))
+
+  else:
+    print("Please enter arguments using the format '14_cal.py month [year]'")
+
+args = input("Enter args: ")
+print(print_cal(args))
