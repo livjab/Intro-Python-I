@@ -32,6 +32,7 @@ print(upper)
 # the user entered into list x.
 
 x = input("Enter comma-separated numbers: ").split(',')
+x = [int(i) for i in x]
 #x = [1, 2, 3, 4, 5, 6]
 # What do you need between the square brackets to make it work?
 evens = [i for i in x if (i % 2) == 0]
